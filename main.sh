@@ -10,6 +10,7 @@ menu () {
     echo ""
     echo "Selecione uma opcao: "
     echo "1 - Horarios"
+    echo "2 - Provas"
     echo "S - SAIR"
 
     read -p "Opcao: " MENUOPCAO
@@ -31,6 +32,18 @@ horarios () {
     
 }
 
+calendarioProvas () {
+
+    clear
+    echo " SEGUNDA       TERÇA      QUARTA       QUINTA      SEXTA"
+    echo "==========================================================="
+    echo " FISICA       QUIMICA    GEOGRAFIA     BIOLOGIA   MATEMATICA"
+    echo " HISTORIA     RELIGIAO   SOCIOLOGIA    ESPANHOL    ARTES"
+    echo " INGLES      LITERATURA   REDACAO      PORTUGUES  FILOSOFIA"
+}
+
+
+
 
 
 while [ $MENUOPCAO != "s" ]
@@ -46,6 +59,16 @@ do
                 continue
             fi
             
+        ;;
+
+        2) 
+            calendarioProvas
+            echo ""
+            read -p "(sair/s): " $MENU2
+            if [ $MENU2 = 's' || $MENU2 = 'sair' ]
+            then
+                continue
+            fi
         ;;
     esac
 done
