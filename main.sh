@@ -70,5 +70,10 @@ do
                 continue
             fi
         ;;
+
+        *) 
+            echo "Opção inválida!"
+            continue
+        ;;
     esac
 done
